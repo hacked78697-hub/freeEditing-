@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ - Connect with me on TikTok, WhatsApp, and more">
+  <meta name="keywords" content="link in bio, Durood, Islamic, TikTok, WhatsApp, Creator">
+  <meta name="author" content="Durood Creator">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>ﷺ • Durood Link-in-Bio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-gradient-start: #f9fafb;
+      --bg-gradient-end: #eef2ff;
+      --surface: rgba(255, 255, 255, 0.96);
+      --surface-blur: rgba(255, 255, 255, 0.8);
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: rgba(203, 213, 225, 0.5);
+      --accent-primary: #10b981;
+      --accent-secondary: #059669;
+      --accent-hover: #047857;
+      --accent-soft: rgba(16, 185, 129, 0.12);
+      --btn-bg: rgba(241, 245, 249, 0.9);
+      --btn-bg-hover: #e2e8f0;
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 10px 40px -12px rgba(0, 0, 0, 0.1);
+      --shadow-glow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 8px 30px rgba(16, 185, 129, 0.15);
+      --transition-smooth: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    body.dark {
+      --bg-gradient-start: #0a0a0f;
+      --bg-gradient-end: #0f172a;
+      --surface: rgba(18, 18, 28, 0.96);
+      --surface-blur: rgba(18, 18, 28, 0.85);
+      --card-bg: rgba(25, 25, 35, 0.9);
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border: rgba(51, 65, 85, 0.6);
+      --accent-primary: #34d399;
+      --accent-secondary: #10b981;
+      --accent-hover: #059669;
+      --accent-soft: rgba(52, 211, 153, 0.15);
+      --btn-bg: rgba(30, 41, 59, 0.8);
+      --btn-bg-hover: #334155;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+      padding: 2rem 1.25rem 3rem;
+      transition: background 0.3s ease;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 560px;
+      margin: 0 auto;
+      animation: fadeSlideUp 0.6s ease-out;
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .theme-toggle {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1.8rem;
+    }
+
+    .toggle-btn {
+      background: var(--surface-blur);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-smooth);
+    }
+
+    .toggle-btn:hover {
+      transform: scale(0.96);
+      background: var(--btn-bg-hover);
+      border-color: var(--accent-primary);
+    }
+
+    .avatar-wrapper {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1.2rem;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 50%;
+      padding: 3px;
+      box-shadow: var(--shadow-glow);
+      transition: transform 0.3s ease;
+    }
+
+    .avatar-wrapper:hover {
+      transform: scale(1.02);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--surface);
+      border: 2px solid var(--surface);
+    }
+
+    .fallback-icon {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #10b981, #047857);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: 500;
+      color: white;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.4rem;
+    }
+
+    .bio {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      text-align: center;
+      max-width: 320px;
+      margin: 0.5rem auto 0;
+      background: var(--accent-soft);
+      padding: 0.6rem 1rem;
+      border-radius: 60px;
+      display: inline-block;
+      width: auto;
+      backdrop-filter: blur(4px);
+    }
+
+    .ad-card {
+      background: var(--surface-blur);
+      backdrop-filter: blur(8px);
+      border-radius: 28px;
+      padding: 1rem;
+      margin: 1.8rem 0;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .ad-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .ad-placeholder {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .links-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 1.5rem 0;
+    }
+
+    .link-btn {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 80px;
+      padding: 0.9rem 1.5rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .link-btn:hover::before {
+      left: 100%;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-4px) scale(1.01);
+      border-color: var(--accent-primary);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .social-icon {
+      font-size: 1.5rem;
+    }
+
+    .arrow-icon {
+      opacity: 0.5;
+      transition: var(--transition-smooth);
+    }
+
+    .link-btn:hover .arrow-icon {
+      opacity: 1;
+      transform: translateX(6px);
+    }
+
+    .copy-card {
+      background: var(--surface-blur);
+      backdrop-filter: blur(12px);
+      border-radius: 80px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.35rem 0.35rem 0.35rem 1.5rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .copy-card span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+
+    .copy-btn {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      border: none;
+      color: white;
+      padding: 0.6rem 1.3rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .copy-btn:hover {
+      transform: scale(0.97);
+      filter: brightness(1.05);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0 1rem;
+      flex-wrap: wrap;
+    }
+
+    .info-row a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+    }
+
+    .info-row a:hover {
+      color: var(--accent-primary);
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 2rem;
+    }
+
+    .toast-message {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--surface-blur);
+      backdrop-filter: blur(20px);
+      color: var(--text-primary);
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      z-index: 1000;
+      animation: toastFade 2.4s forwards;
+      border: 1px solid var(--border);
+      pointer-events: none;
+    }
+
+    @keyframes toastFade {
+      0% { opacity: 0; transform: translateX(-50%) translateY(20px);}
+      15% { opacity: 1; transform: translateX(-50%) translateY(0);}
+      85% { opacity: 1;}
+      100% { opacity: 0; transform: translateX(-50%) translateY(-10px); visibility: hidden;}
+    }
+
+    .modal-modern {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .modal-content {
+      background: var(--surface);
+      max-width: 380px;
+      width: 90%;
+      border-radius: 40px;
+      padding: 1.8rem;
+      border: 1px solid var(--border);
+      animation: modalPop 0.25s ease;
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.96); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close {
+      background: var(--accent-primary);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 60px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="theme-toggle">
+    <button class="toggle-btn" id="themeToggleBtn">
+      <span class="theme-icon">🌙</span> 
+      <span id="themeText">Dark mode</span>
+    </button>
+  </div>
+
+  <div class="profile" style="text-align: center;">
+    <div class="avatar-wrapper">
+      <img class="avatar" id="profileAvatar" src="https://image2url.com/r2/default/images/1775199757613-9d668486-4e75-42ca-a4b2-5d60a6646704.jpg" alt="Durood Shareef" 
+           onerror="this.onerror=null; this.style.display='none'; this.parentNode.innerHTML='<div class=fallback-icon>ﷺ</div>';">
+    </div>
+    <h1>⚡𝟴𝟬𝟰⍣⃝🇦🇫 𝗙𝗔𝗡⚡</h1>
+    <div class="bio">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ</div>
+  </div>
+
+  <div class="ad-card">
+    <div class="ad-label">📢 TOP AD PLACEMENT</div>
+    <div class="ad-placeholder"><span>Replace with AdSense code</span></div>
+  </div>
+
+  <div class="links-grid">
+    <a href="https://www.tiktok.com/@duroodpage" target="_blank" class="link-btn">
+      <div class="btn-left"><span class="social-icon">🎵</span><span>TikTok · Durood Hub</span></div>
+      <span class="arrow-icon">→</span>
+    </a>
+    <a href="https://whatsapp.com/channel/duroodchannel" target="_blank" class="link-btn">
+      <div class="btn-left"><span class="social-icon">📢</span><span>WhatsApp Channel</span></div>
+      <span class="arrow-icon">→</span>
+    </a>
+    <a href="https://chat.whatsapp.com/duroodgroup" target="_blank" class="link-btn">
+      <div class="btn-left"><span class="social-icon">👥</span><span>WhatsApp Group</span></div>
+      <span class="arrow-icon">→</span>
+    </a>
+    <a href="https://www.instagram.com/duroodpage" target="_blank" class="link-btn">
+      <div class="btn-left"><span class="social-icon">📸</span><span>Instagram · Reels</span></div>
+      <span class="arrow-icon">→</span>
+    </a>
+  </div>
+
+  <div class="ad-card">
+    <div class="ad-label">📢 MIDDLE AD PLACEMENT</div>
+    <div class="ad-placeholder"><span>AdSense responsive unit</span></div>
+  </div>
+
+  <div class="copy-card">
+    <span>🔗 durood.link/bio</span>
+    <button class="copy-btn" id="copyLinkBtn">📋 Copy Link</button>
+  </div>
+
+  <div class="ad-card">
+    <div class="ad-label">📢 BOTTOM AD PLACEMENT</div>
+    <div class="ad-placeholder"><span>Footer banner ready</span></div>
+  </div>
+
+  <div class="info-row">
+    <a href="#" id="privacyBtn">Privacy</a>
+    <a href="#" id="aboutBtn">About</a>
+    <a href="#" id="contactBtn">Contact</a>
+  </div>
+  <div class="footer-note">ﷺ · Durood o Salam · Barakah in every click</div>
+</div>
+
+<div id="infoModal" class="modal-modern">
+  <div class="modal-content">
+    <h3 id="modalTitle">Info</h3>
+    <p id="modalText"></p>
+    <button class="modal-close" id="closeModalBtn">Close</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const body = document.body;
+    const toggleBtn = document.getElementById('themeToggleBtn');
+    const themeText = document.getElementById('themeText');
+    const themeIcon = document.querySelector('.theme-icon');
+    
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        themeText.innerText = 'Light mode';
+        themeIcon.innerText = '☀️';
+      } else {
+        body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        themeText.innerText = 'Dark mode';
+        themeIcon.innerText = '🌙';
+      }
+    }
+    
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') setTheme('dark');
+    else if (saved === 'light') setTheme('light');
+    else setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    toggleBtn.addEventListener('click', () => setTheme(body.classList.contains('dark') ? 'light' : 'dark'));
+    
+    function showToast(msg) {
+      const existing = document.querySelector('.toast-message');
+      if (existing) existing.remove();
+      const toast = document.createElement('div');
+      toast.className = 'toast-message';
+      toast.innerText = msg || '✓ Copied!';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2400);
+    }
+    
+    document.getElementById('copyLinkBtn').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('https://durood.link/bio');
+        showToast('✨ Durood link copied! ✨');
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = 'https://durood.link/bio';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('📋 Copied');
+      }
+    });
+    
+    const modal = document.getElementById('infoModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    
+    function openModal(title, content) {
+      modalTitle.innerText = title;
+      modalText.innerHTML = content;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    
+    document.getElementById('privacyBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('Privacy Policy', 'No personal data collected. Theme preference stored locally.');
+    });
+    document.getElementById('aboutBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('About', 'Islamic link-in-bio platform. Share Durood & connect with community.');
+    });
+    document.getElementById('contactBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('Contact', 'durood@example.com');
+    });
+    
+    const img = document.getElementById('profileAvatar');
+    if (img && img.complete && img.naturalHeight === 0) {
+      img.onerror();
+    }
+  })();
+</script>
+</body>
+</html>
